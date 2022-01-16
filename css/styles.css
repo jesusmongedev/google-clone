@@ -1,0 +1,64 @@
+/* Css Variables */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+.header__nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding-left: 0;
+  margin: 0;
+}
+.header__nav ul li {
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #5f6368;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+.header__nav ul li::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #4285f4;
+  transition: all 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.header__nav ul li:hover {
+  color: #4285f4;
+}
+.header__nav ul li:hover::after {
+  width: 150%;
+  left: -25%;
+}
+.header__nav ul img {
+  width: 1.5em;
+}
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.header__user div {
+  cursor: pointer;
+}
+.header__user div .burger-bar {
+  width: 1.5em;
+}
+.header__user div .profile-picture {
+  width: 2em;
+}

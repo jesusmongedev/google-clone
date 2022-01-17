@@ -2,6 +2,7 @@
 :root {
   --primary-color: #4285f4;
   --font-color: #5f6368;
+  --body-font-size: 1rem;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 .header__nav ul li {
   padding: 20px 0;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: var(--body-font-size);
   list-style: none;
   position: relative;
 }
@@ -83,11 +84,11 @@ figure {
   margin: 3em 0 0;
 }
 figure img {
-  max-width: 209px;
+  width: 209px;
 }
 .search-input {
-  min-width: 300px;
   position: relative;
+  border: 2px solid red;
 }
 .search-input .bx {
   position: absolute;
@@ -102,13 +103,13 @@ figure img {
   right: 11px;
 }
 input {
-  width: 78%;
   border-radius: 25px;
   border: 0.3px solid #ccc;
   padding: 0.5em 2em;
 }
 .main__text span {
   font-weight: 300;
+  font-size: var(--body-font-size);
   color: #000;
 }
 .main__text span a {

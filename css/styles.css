@@ -5,8 +5,9 @@
   --body-font-size: 1rem;
   --link-font-size: 0.875rem;
   --footer-location-font-size: 0.9375rem;
-  --icon-font-size: 2em;
-  --bx-grid-font-size: 1.8em;
+  --icon-font-size: 1.4em;
+  --profile-picture-size: 1.75em;
+  /* --bx-grid-font-size: 1.7em; */
 }
 
 @media (min-width: 40em) {
@@ -14,8 +15,9 @@
     --body-font-size: 1.25rem;
     --link-font-size: 1rem;
     --footer-location-font-size: 1rem;
-    --icon-font-size: 2.5em;
-    --bx-grid-font-size: 2.125em;
+    --icon-font-size: 1.65em;
+    --profile-picture-size: 2em;
+    /* --bx-grid-font-size: 1.8em; */
   }
 }
 
@@ -32,9 +34,11 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  color: var(--font-color);
+  display: flex;
+  flex-flow: column;
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: var(--font-color);
 }
 
 .header {
@@ -51,9 +55,9 @@ body {
   margin: 0;
 }
 .header__nav ul li {
-  padding: 20px 0;
   font-weight: 500;
-  font-size: var(--body-font-size);
+  line-height: 3.5rem;
+  font-size: var(--link-font-size);
   list-style: none;
   position: relative;
 }
@@ -64,7 +68,7 @@ ul a {
 .header__nav ul li::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   left: 50%;
@@ -82,6 +86,7 @@ ul a {
 }
 .bx-menu {
   font-size: var(--icon-font-size);
+  margin-top: 0.125em;
 }
 .header__user {
   display: flex;
@@ -95,11 +100,17 @@ ul a {
   cursor: pointer;
 }
 .header__user div .bxs-grid {
-  font-size: var(--bx-grid-font-size);
+  font-size: var(--icon-font-size);
+  padding: 0.2em;
+  margin-bottom: 0.15em;
+}
+.header__user div .bxs-grid:hover {
+  background: #f2f2f2;
+  border-radius: 50%;
 }
 .header__user div .profile-picture {
-  width: var(--icon-font-size);
-  border-radius: var(--icon-font-size);
+  width: var(--profile-picture-size);
+  border-radius: var(--profile-picture-size);
 }
 
 /* Main Content */
@@ -138,6 +149,7 @@ input {
   width: 100%;
   border-radius: 25px;
   border: 1px solid #dfe1e5;
+  background: #fff;
   padding: 0.9rem 2.5rem;
   font-family: inherit;
   font-size: 1rem;
@@ -167,7 +179,7 @@ input:hover {
 .main__text span {
   font-weight: 300;
   font-size: var(--link-font-size);
-  color: #000;
+  color: #3c4043;
 }
 .main__text span a {
   text-decoration: none;
@@ -177,8 +189,9 @@ input:hover {
 
 /* Footer */
 footer {
-  position: absolute;
-  bottom: 0px;
+  margin: auto 0 0 0;
+  /* position: absolute;
+  bottom: 0px; */
   width: 100vw;
   background-color: #f2f2f2;
 }
@@ -235,7 +248,8 @@ footer {
   .header__user a {
     display: block;
     text-decoration: none;
-    color: inherit;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.87);
   }
   .header__user a:hover {
     text-decoration: underline;

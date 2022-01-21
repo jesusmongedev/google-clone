@@ -22,6 +22,10 @@
       rel="stylesheet"
     />
     <title>Google</title>
+    <script
+      async
+      src="https://cse.google.com/cse.js?cx=3606e1fca5127c812"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -55,11 +59,16 @@
           alt="Google Logo"
         />
       </figure>
-      <div class="search-input">
+      <form
+        action="/google-clone"
+        method="get"
+        role="search"
+        class="search-input"
+      >
         <i class="bx bx-search-alt-2"></i>
-        <input type="text" name="" id="" />
+        <input type="text" name="q" id="" />
         <i title="Buscar por voz" class="bx bxs-microphone"></i>
-      </div>
+      </form>
       <div class="search-buttons">
         <button>Google Search</button>
         <button>I'm Feeling Lucky</button>
@@ -68,6 +77,7 @@
         <span>Google offered in: <a href="#">Español (Latinoamérica)</a></span>
       </div>
     </main>
+    <div class="gcse-searchresults-only"></div>
     <footer>
       <div class="footer__location">Ecuador</div>
       <div class="footer__info">

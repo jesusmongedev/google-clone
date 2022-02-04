@@ -22,10 +22,6 @@
       rel="stylesheet"
     />
     <title>Google</title>
-    <script
-      async
-      src="https://cse.google.com/cse.js?cx=3606e1fca5127c812"
-    ></script>
   </head>
   <body>
     <header class="header">
@@ -59,30 +55,24 @@
           alt="Google Logo"
         />
       </figure>
-      <form
-        action="/google-clone"
-        method="get"
-        role="search"
-        class="search-input"
-      >
+      <div class="search-input">
         <i class="bx bx-search-alt-2"></i>
-        <input type="text" name="q" id="" />
+        <input type="text" name="q" id="search" />
         <i title="Buscar por voz" class="bx bxs-microphone"></i>
-      </form>
+      </div>
       <div class="search-buttons">
-        <button>Google Search</button>
+        <button id="button" type="submit">Google Search</button>
         <button>I'm Feeling Lucky</button>
       </div>
       <div class="main__text">
         <span>Google offered in: <a href="#">Español (Latinoamérica)</a></span>
       </div>
     </main>
-    <div class="gcse-searchresults-only"></div>
     <footer>
       <div class="footer__location">Ecuador</div>
       <div class="footer__info">
         <ul>
-          <li>Dark theme: off</li>
+          <li id="theme">Dark theme: on</li>
           <li>Settings</li>
           <li>Privacy</li>
           <li>Terms</li>
@@ -94,5 +84,6 @@
         </ul>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

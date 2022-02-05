@@ -1,26 +1,32 @@
 /* Css Variables */
 :root {
   --primary-color: #4285f4;
-  /* --font-color: #5f6368; */
-  --font-color: #fff;
+  --font-color: #5f6368;
   --body-font-size: 1rem;
   --link-font-size: 0.875rem;
+  --input-bg-color: #fff;
   --footer-location-font-size: 0.9375rem;
   --icon-font-size: 1.4em;
   --profile-picture-size: 1.75em;
-  --bg-color: #202124;
-  /* --bg-footer-color: #f2f2f2; */
-  --bg-footer-color: #171717;
-  /* --bg-button-color: #f8f9fa; */
-  --bg-button-color: #303134;
-  /* --bg-border-color: #dadce0; */
-  --bg-border-color: #212327;
-  /* --bx-grid-font-size: 1.7em; */
+  --bg-color: #fff;
+  --bg-footer-color: #f2f2f2;
+  --bg-input-color: rgb(32 33 36 / 28%);
+  --box-shadow: rgb(32 33 36 / 28%);
+  --border-button-color: rgba(223, 225, 229, 0);
+  --bg-button-color: #f8f9fa;
+  --bg-border-color: #dadce0;
 }
 
-.dark-mode {
+.dark-theme {
   --font-color: #fff;
   --bg-color: #202124;
+  --bg-footer-color: #171717;
+  --bg-button-color: #303134;
+  --bg-input-color: #212321;
+  --box-shadow: rgba(179, 180, 185, 0.28);
+  --border-button-color: rgba(64, 64, 65, 0);
+  --bg-border-color: #212327;
+  --bg-dark-color: #303134;
 }
 
 @media (min-width: 40em) {
@@ -53,6 +59,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--bg-color);
   color: var(--font-color);
+  transition: 0.3s all ease;
 }
 
 .header {
@@ -119,7 +126,7 @@ ul a {
   margin-bottom: 0.15em;
 }
 .header__user div .bxs-grid:hover {
-  background: #f2f2f2;
+  background: var(--bg-footer-color);
   border-radius: 50%;
 }
 .header__user div .profile-picture {
@@ -170,10 +177,9 @@ input {
   outline: none;
 }
 input:hover {
-  /* box-shadow: 0 1px 6px rgb(32 33 36 / 28%); */
-  border-color: rgba(223, 225, 229, 0);
-  background-color: #303134;
-  box-shadow: 0 1px 6px 0 var(--bg-footer-color);
+  box-shadow: 0 1px 6px var(--bg-input-color);
+  border-color: var(--bg-border-color);
+  background-color: var(--bg-dark-color);
 }
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -199,7 +205,7 @@ input:-webkit-autofill:focus {
   cursor: pointer;
 }
 .search-buttons button:hover {
-  box-shadow: 0 0.75px 5px rgb(32 33 36 / 28%);
+  box-shadow: 0 0.75px 5px var(--box-shadow);
   border-color: rgba(223, 225, 229, 0);
 }
 
